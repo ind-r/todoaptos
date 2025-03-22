@@ -31,7 +31,7 @@ export default function InputTodo({
     const lastestId = tasks.length > 0 ? parseInt(tasks[tasks.length - 1].task_id) + 1 : 1;
     const newTaskToPush: Task = {
       address: account.address.toString(),
-      completed: "false",
+      completed: false,
       content: content,
       task_id: lastestId + "",
     };
@@ -59,7 +59,7 @@ export default function InputTodo({
 
   return (
     <div
-      className={`flex bg-gray-100 p-4 rounded-lg mt-4 transition ease-in-out w-full ${isFocused ? "shadow-md scale-105" : ""}`}
+      className={`flex  p-4 rounded-lg mt-4 transition ease-in-out w-full ${isFocused ? "shadow-md scale-105 bg-black" : ""}`}
     >
       <input
         type="text"

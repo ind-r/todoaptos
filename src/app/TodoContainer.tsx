@@ -34,7 +34,7 @@ export default function TodoContainer({
 
       const newTasks = tasks.map((task) => {
         if (task.task_id === task_id) {
-          return { ...task, completed: task.completed === "true" ? "false" : "true" };
+          return { ...task, completed: true };
         }
         return task;
       });
@@ -44,7 +44,7 @@ export default function TodoContainer({
     }
   };
   return (
-    <>
+    <div className="pb-32">
       <InputTodo tasks={tasks} setTasks={setTasks} />
       <div className="w-full">
         {tasks.map((todo) => (
@@ -57,6 +57,6 @@ export default function TodoContainer({
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }

@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import CustomCheckox from "./customCheckbox";
 
 export default function Todo({
@@ -10,16 +9,15 @@ export default function Todo({
 }: {
   id: string;
   content: string;
-  completed: string;
+  completed: boolean;
   checkTask: (task_id: string) => void;
 }) {
-  const [checked, setChecked] = useState<string>(completed);
   return (
-    <div className="flex bg-gray-100 p-4 rounded-lg mt-4">
+    <div className="flex p-4 rounded-lg mt-4">
       <CustomCheckox
-        checked={checked === "true"}
-        onChange={(e) => {
-          setChecked(e ? "true" : "false");
+        checked={completed}
+        onChange={() => {
+          if (completed) return;
           checkTask(id);
         }}
       />

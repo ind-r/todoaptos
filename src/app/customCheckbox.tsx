@@ -7,11 +7,7 @@ export default function CustomCheckox({
 }) {
   return (
     <label className="flex items-center cursor-pointer">
-      {checked ? (
-        <input type="checkbox" className="hidden" checked={true} />
-      ) : (
-        <input type="checkbox" className="hidden" checked={checked} onChange={(e) => onChange(e.target.checked)} />
-      )}
+      <input type="checkbox" className="hidden" checked={checked} onChange={(e) => onChange(e.target.checked)} />
       <div
         className={`w-10 h-6 rounded-full shadow-inner transition-colors duration-200 ease-in-out flex items-center justify-center
           ${checked ? "bg-green-300" : "bg-gray-300"}`}
