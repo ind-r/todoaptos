@@ -1,7 +1,6 @@
 "use client";
 
 import { Header } from "@/components/Header";
-import { TopBanner } from "@/components/TopBanner";
 import { useEffect, useState } from "react";
 import { useWallet, InputTransactionData } from "@aptos-labs/wallet-adapter-react";
 import { MODULE_ADDRESS } from "@/constants";
@@ -77,7 +76,6 @@ function App() {
   };
   return (
     <>
-      <TopBanner />
       <Header />
       <div className="flex items-start justify-center flex-col container">
         <div className="text-4xl mt-10 bg-red-100 px-10 py-5 rounded-xl">Todo List</div>
